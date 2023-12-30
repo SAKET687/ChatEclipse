@@ -1,6 +1,5 @@
-const userName = localStorage.getItem("userName");
 const socket = io();
-
+const userName = localStorage.getItem("userName");
 if (userName) {
   socket.emit("user-joined", userName);
 }
@@ -9,8 +8,6 @@ function addMessage(message, sender) {
   const $messages = $("#messages");
   const $newMessage = $("<li>").text(`${sender}: ${message}`);
   $messages.append($newMessage);
-  window.scrollTo({ top: window.scrollHeight, behavior: "smooth" });
-  // $messages.scrollTop($messages.prop("scrollHeight"));
 }
 
 socket.on("chat message", ({ message, sender }) => {
@@ -41,26 +38,3 @@ function handleKeyPress(event) {
 
 const send = document.getElementById("send");
 send.addEventListener("click", sendMessage);
-
-// function scrollToBottom() {
-//   const $messages = $("#messages");
-//   $messages.scrollTop($messages.prop("scrollHeight"));
-// }
-// socket.on("chat message", () => {
-//   scrollToBottom();
-// });
-
-// function autoScroll() {
-//   const $messages = $("#messages");
-
-//   setInterval(() => {
-//     $messages.animate({ scrollTop: $messages.prop("scrollHeight") }, 500);
-//   }, 5000);
-// }
-// autoScroll();
-
-// const messagesContainer = document.getElementById("#messages");
-// messagesContainer.scrollTo({
-//   top: messagesContainer.scrollHeight,
-//   behavior: "smooth",
-// });
