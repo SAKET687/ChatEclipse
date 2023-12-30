@@ -1,5 +1,6 @@
-const socket = io();
-const userName = localStorage.getItem("userName");
+var userName = localStorage.getItem("userName");
+var socket = io();
+
 if (userName) {
   socket.emit("user-joined", userName);
 }
@@ -35,6 +36,3 @@ function handleKeyPress(event) {
     sendMessage();
   }
 }
-
-const send = document.getElementById("send");
-send.addEventListener("click", sendMessage);
