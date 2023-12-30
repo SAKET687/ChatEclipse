@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatEclipse : New Way to Chat</title>
+    <link rel="stylesheet" href="newstyle.css" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn1.iconfinder.com/data/icons/user-interface-2-blue-filled-line/24/user_interface_ui_web_Paper_plane_send_app-1024.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="chat-container">
+      <ul id="messages"></ul>
+
+      <div class="input-container">
+        <textarea
+          class="send"
+          id="inputMessage"
+          type="text"
+          autocomplete="off"
+          placeholder="Enter your message: "
+          onkeydown="handleKeyPress(event)"
+          autofocus
+        ></textarea>
+
+        <button onclick="sendMessage()">
+          <img
+            src="https://cdn1.iconfinder.com/data/icons/user-interface-2-blue-filled-line/24/user_interface_ui_web_Paper_plane_send_app-1024.png"
+            alt="Send"
+          />
+        </button>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/server.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="newscript.js"></script>
+  </body>
+</html>

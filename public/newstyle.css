@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("https://i.pinimg.com/originals/6f/6c/15/6f6c1538b050072b002dbc06bedaaf90.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+  padding-bottom: 80px;
+  overflow-y: auto;
+}
+
+#messages {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  max-width: 80%;
+}
+
+#messages li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  word-wrap: break-word;
+  width: 100%;
+}
+
+#messages li:nth-child(even) {
+  background-color: rgba(26, 159, 248, 0.9);
+  color: #000000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+#messages li:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 10px;
+  padding-right: 5px;
+  width: 95%;
+  padding-bottom: 10px;
+}
+
+#inputMessage {
+  flex: 1;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+.send {
+  padding: 2px;
+  height: 52px;
+  background-color: #dbefff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+button {
+  border-radius: 50%;
+}
+
+button img {
+  padding: 2px;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+button:hover {
+  background-color: #b4dcff;
+  border-radius: 20px;
+  transition: 1s;
+}
+
+@media only screen and (max-width: 767px) {
+  .chat-container {
+    padding-bottom: 40px;
+  }
+
+  #messages {
+    max-width: 90%;
+    padding-bottom: 20%;
+  }
+
+  #inputMessage {
+    font-size: 14px;
+  }
+
+  .send {
+    height: 42px;
+  }
+
+  button img {
+    width: 30px;
+    height: 30px;
+  }
+}
