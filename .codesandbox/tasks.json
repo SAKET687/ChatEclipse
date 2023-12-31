@@ -22,7 +22,7 @@
       "command": "npm run start",
       "runAtStart": true,
       "preview": {
-        "port": 3000
+        "port": "https://chat-eclipse.vercel.app/"
       }
     },
     "npm start": {
