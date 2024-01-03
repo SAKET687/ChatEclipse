@@ -77,6 +77,11 @@ header h2 {
   font-size: 16px;
 }
 
+.or {
+  color: azure;
+  font-weight: bold;
+}
+
 .try button:hover {
   border-radius: 25px;
   background-color: #0464c4;
@@ -98,6 +103,9 @@ footer a {
 }
 
 @media (max-width: 767px) {
+  header {
+    height: 66px;
+  }
   .wel {
     font-size: 24px;
     margin-top: 15px;
@@ -132,8 +140,8 @@ footer a {
   .try button {
     font-size: 14px;
   }
-  footer{    
-  font-size: 12px;
+  footer {
+    font-size: 12px;
   }
 }
 
